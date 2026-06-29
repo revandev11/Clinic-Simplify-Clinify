@@ -2,6 +2,7 @@ package az.clinify.demo.entity;
 
 import jakarta.persistence.Column;
 
+
 public class Department extends BaseEntity{
 
     @Column(nullable = false, unique = true, length = 150)

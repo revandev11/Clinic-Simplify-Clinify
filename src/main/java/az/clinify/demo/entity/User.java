@@ -1,0 +1,47 @@
+package az.clinify.demo.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDate;
+
+@Entity
+@Table(name = "users")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class User extends BaseEntity {
+
+    @Column(unique = true, nullable = false, length = 7)
+    private String fin;
+
+    @Column(nullable = false)
+    private String firstName;
+
+    @Column(nullable = false)
+    private String lastName;
+
+    @Column(nullable = false)
+    private String gender;
+
+    @Column(nullable = false)
+    private LocalDate birthDate;
+
+    @Column(unique = true, nullable = false)
+    private String phoneNumber;
+
+    @Column(unique = true)
+    private String email;
+
+    @Column
+    private String password;
+
+    @Column(nullable = false)
+    private boolean hasAccount = false;
+}
